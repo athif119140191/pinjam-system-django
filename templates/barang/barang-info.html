@@ -1,0 +1,29 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block content %}
+  <div class="card">
+
+    <div class="card-body">
+
+      <div class="personal_information">
+        <div class="row">
+          <h2 class="mx-auto">Informasi Barang</h2>
+        </div>
+        <hr>
+        <div class="row">
+          <div style="font-size:24px; margin-left: 30px;">
+            <pre>Kode Barang        : {{ barang.kode_barang }}</pre>
+            <pre>Nama Barang        : {{ barang.nama_barang }}</pre>
+            <pre>Merk               : {{ barang.merk }}</pre>
+            <pre>Stok               : {{ barang.stok }}</pre>
+            <pre>Kondisi            : {{ barang.kondisi }}</pre>
+            <pre>Status             : {{ barang.status }}</pre>
+            <pre>BAST Perolehan     : <button class="btn"><a  href="{{ barang.bast_perolehan.url }} " download><i class="fa fa-download"></i> Download</a></button></pre>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+{% endblock %}

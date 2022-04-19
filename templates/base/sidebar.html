@@ -1,0 +1,117 @@
+{% load static %}
+<div class="sidebar">
+    <nav class="sidebar-nav">
+        <ul class="nav">
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'home' %}"><i class="icon-speedometer"></i> Dashboard</a>
+            </li>
+            <!-- Barang Section Start -->
+            <li class="nav-item nav-dropdown">
+                <a class="nav-link nav-dropdown-toggle" href="#">
+                    <i class="nav-icon icon-puzzle"></i>Barang</a>
+                <ul class="nav-dropdown-items">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'tambah-barang' %}">
+                            <i class="fa fa-plus-circle"></i>Tambah Barang</a>
+                    </li>
+                    <li class="nav-item">
+                       <a class="nav-link" href="{% url 'barang-list' %}">
+                           <i class="fa fa-list"></i>Barang List</a>
+                   </li>               
+                </ul>
+              </li>
+              <!-- Barang Section END -->
+
+            <!-- Pegawai Section Start -->
+            <li class="nav-item nav-dropdown">
+             <a class="nav-link nav-dropdown-toggle" href="#">
+                 <i class="nav-icon icon-puzzle"></i>Pegawai</a>
+             <ul class="nav-dropdown-items">
+                 <li class="nav-item">
+                     <a class="nav-link" href="{% url 'tambah-pegawai' %}">
+                         <i class="fa fa-plus-circle"></i>Tambah Pegawai</a>
+                 </li>
+                 <li class="nav-item">
+                    <a class="nav-link" href="{% url 'pegawai-list' %}">
+                        <i class="fa fa-list"></i>Pegawai List</a>
+                </li>               
+             </ul>
+           </li>
+           <!-- Pegawai Section END -->
+
+  
+           <!-- Peminjaman Section START -->
+           <li class="nav-item nav-dropdown">
+            <a class="nav-link nav-dropdown-toggle" href="#">
+                <i class="nav-icon icon-puzzle"></i>Peminjaman</a>
+            <ul class="nav-dropdown-items">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'tambah-peminjaman' %}">
+                        <i class="fa fa-plus-circle"></i>Tambah Peminjaman</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'peminjaman-list' %}">
+                        <i class="fa fa-list"></i>Peminjaman List</a>
+                </li>
+            </ul>
+          </li>
+          <!-- Detail Peminjaman Section END -->
+
+           <!-- Peminjaman Section START -->
+           <li class="nav-item nav-dropdown">
+            <a class="nav-link nav-dropdown-toggle" href="#">
+                <i class="nav-icon icon-puzzle"></i>Detail Peminjaman</a>
+            <ul class="nav-dropdown-items">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'tambah-dp' %}">
+                        <i class="fa fa-plus-circle"></i>Tambah Detail Peminjaman</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'dp-list' %}">
+                        <i class="fa fa-list"></i>Detail Peminjaman List</a>
+                </li>
+            </ul>
+          </li>
+          <!-- Detail Peminjaman Section END -->
+
+            <!-- Gedung Section Start -->
+            <li class="nav-item nav-dropdown">
+                <a class="nav-link nav-dropdown-toggle" href="#">
+                    <i class="nav-icon icon-puzzle"></i>Gedung</a>
+                <ul class="nav-dropdown-items">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'tambah-gedung' %}">
+                            <i class="fa fa-plus-circle"></i>Tambah Gedung</a>
+                    </li>
+                    <li class="nav-item">
+                       <a class="nav-link" href="{% url 'gedung-list' %}">
+                           <i class="fa fa-list"></i>Gedung List</a>
+                   </li>               
+                </ul>
+              </li>
+              <!-- Gedung Section END -->
+
+            <!-- Ruang Section Start -->
+            <li class="nav-item nav-dropdown">
+                <a class="nav-link nav-dropdown-toggle" href="#">
+                    <i class="nav-icon icon-puzzle"></i>Ruang</a>
+                <ul class="nav-dropdown-items">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'tambah-ruang' %}">
+                            <i class="fa fa-plus-circle"></i>Tambah Ruang</a>
+                    </li>
+                    <li class="nav-item">
+                       <a class="nav-link" href="{% url 'ruang-list' %}">
+                           <i class="fa fa-list"></i>Ruang List</a>
+                   </li>               
+                </ul>
+              </li>
+              <!-- Ruang Section END -->
+
+        </ul>
+    </nav>
+    <button class="sidebar-minimizer brand-minimizer" type="button"></button>
+
+    {% block sidebar %}
+    {% endblock %}
+</div>

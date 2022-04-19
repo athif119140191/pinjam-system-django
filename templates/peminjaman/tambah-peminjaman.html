@@ -1,0 +1,42 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% load bootstrap4 %}       {# import bootstrap4/bootstrap3 #}
+{% bootstrap_css %}         {# Embed Bootstrap CSS #}
+{% bootstrap_javascript jquery='full' %}  {# Embed Bootstrap JS+jQuery #}
+{% block content %}
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="{% static 'dist/vendors/css/datepicker-widget.css' %}" type="text/css" media="all"  rel="stylesheet">
+  <link href="{% static 'dist/vendors/css/bootstrap-datetimepicker.css' %}" type="text/css" media="all"  rel="stylesheet">
+   
+   
+  <script src="{% static 'dist/js/jquery-3.6.0.min.js' %}"></script>
+  <script src="{% static 'dist/vendors/js/popper.min.js' %}"></script>
+  <script src="{% static 'dist/vendors/js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'dist/vendors/js/moment-with-locales.min.js' %}"></script>
+  <script src="{% static 'dist/vendors/js/datepicker-widget.js' %}"></script>
+  <script src="{% static 'dist/vendors/js/bootstrap-datetimepicker.min.js' %}"></script>
+
+
+</head>
+<body>
+  <div class="card">
+    <div class="card-header">Tambah Peminjaman Form</div>
+    <div class="card-body">
+
+      <form class="" action="" method="post" enctype="multipart/form-data">
+
+        {% csrf_token %}
+        {{ forms.as_p }}
+        
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+  
+    </div>
+  </div>
+</body>
+
+{% endblock %}

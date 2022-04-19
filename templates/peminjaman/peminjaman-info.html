@@ -1,0 +1,28 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block content %}
+  <div class="card">
+
+    <div class="card-body">
+
+      <div class="personal_information">
+        <div class="row">
+          <h2 class="mx-auto">Informasi Peminjaman</h2>
+        </div>
+        <hr>
+        <div class="row">
+          <div style="font-size:24px; margin-left: 30px">
+            <pre>No. Peminjaman          : {{ peminjaman.no_peminjaman }}</pre>
+            <pre>NIP                     : {{ peminjaman.nip }}</pre>
+            <pre>Nama Pegawai            : {{ peminjaman.nama_pegawai }}</pre>
+            <pre>Tanggal Pinjam          : {{ peminjaman.tanggal_pinjam }}</pre>
+            <pre>Tanggal Kembali         : {{ peminjaman.tanggal_kembali }}</pre>
+            <pre>BAST Disposisi          : <button class="btn"><a  href="{{ peminjaman.bast_disposisi.url }} " download><i class="fa fa-download"></i> Download</a></button></pre>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+{% endblock %}
